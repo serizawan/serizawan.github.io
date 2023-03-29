@@ -1,18 +1,17 @@
 ---
 layout: page
-title: About
+title: About me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hey visitor! Welcome to my blog 👋
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I am a senior Software Developer working at SAP. I am located in Paris, France and I am contributing to the SAP SuccessFactors Suite.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Technologies I have experience with are: Python, Django, Java, Spring, Apache Solr, Apache Kafka, Docker and Jenkins.
 
+Among my areas of interest, here are some items I enjoy writing about: problem solving, working methodologies, python, mathematics, table tennis...
 
-[jekyll-organization]: https://github.com/jekyll
+You can freely share the content of this blog as soon as you mention my website in credits.
+
+Happy reading!
