@@ -1,7 +1,7 @@
 ---
-layout: post
-title:  "Why did I name my blog: Same but Different ✌️"
-date:   2023-03-26 22:22:22 +0200
+layout: single
+title: "Why did I name my blog: Same but Different"
+date: 2023-03-26
 categories: random
 ---
 
