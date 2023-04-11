@@ -1,11 +1,13 @@
 ---
 layout: single
-title: "Why did I name my blog: Same but Different"
+title: "Why I named my blog: _Same but Different_"
 date: 2023-03-26
 categories: random
+header:
+  teaser: /assets/images/posts/why.png
 ---
 
-Well, let's ChatGPT (GPT3.5) explain what this idiom means:
+Well, let's first read ChatGPT's definition of this idiom:
 
 > The expression "same but different" usually refers to something that has similarities with something else but also has distinct differences. It's often used to describe things that may appear similar at first glance but upon closer examination, have unique qualities that set them apart.
 > 
