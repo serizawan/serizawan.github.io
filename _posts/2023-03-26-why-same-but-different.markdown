@@ -1,10 +1,10 @@
 ---
 layout: single
-title: "Why I named my blog: _Same but Different_"
+title: "Why I've named my blog: _Same but Different_"
 date: 2023-03-26
 categories: random
 header:
-  teaser: /assets/images/posts/why.png
+  teaser: /assets/images/posts/teasers/why.png
 ---
 
 Well, let's first read ChatGPT's definition of this idiom:

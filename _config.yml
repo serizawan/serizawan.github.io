@@ -7,7 +7,7 @@ title: "Same But Different"
 subtitle: "A blog by Marwan Ajala"
 name: "Marwan Ajala"
 repository: "serizawan/serizawan"
-logo: "/assets/images/logo.png"
+logo: "/assets/images/home/logo.png"
 breadcrumbs: true
 search: true
 lunr:
@@ -19,7 +19,7 @@ github_username: "serizawan"
 paginate: 5
 author:
   name: "Marwan Ajala"
-  avatar: "/assets/images/me.jpg"
+  avatar: "/assets/images/home/me.jpg"
   bio: "Currently working at SAP SuccessFactors."
   location : "Paris, France"
   links:
