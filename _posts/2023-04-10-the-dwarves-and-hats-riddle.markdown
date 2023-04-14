@@ -29,31 +29,31 @@ I was asked this riddle when I was a teenager. I was amazed by the effectiveness
 
 Despite it is not enforced in the statement, we can add the condition that sorcerer can listen to the dwarves strategy to have them failed as much as possible in order to prevent situational guess.
 
-Let's walk through the strategies starting from the less efficient to the best one! Note that we estimate the efficiency of a strategy regarding the number of certainly saved dwarves. Lucky guess (meaning the dwarf is not 100% sure to be saved) are counted as failures.
+Let's walk through the strategies starting from the less efficient to the best one! Note that we estimate the efficiency of a strategy regarding the number of certainly saved dwarves. Lucky guess (meaning the dwarf is not 100% sure to be saved) are counted as failures. We will still mention a lucky score in order to decide rank in case of equality on the previous metric.
 
 ## The *one color* strategy
-Efficiency: ![0%](https://progress-bar.dev/0)
+![Rate](https://progress-bar.dev/0/?title=Rate&width=150&color=babaca)
 
 Here the dwarves pick a color during the strategy phase. Once the guessing phase starts, they claim the agreed color one after the other. As the sorcerer can listen to them, he will simply take care setting the color's hat to the remaining one causing the metamorphosis of all of them without letting even them a single chance to pass.
 
 The efficiency is 0% and the efficiency with luck is 0%.
 
 ## The *random* strategy
-Efficiency: ![0%](https://progress-bar.dev/0)
+![Rate](https://progress-bar.dev/0/?title=Rate&width=150&color=babaca)
 
 Now the dwarves just take their decision randomly once the guess phase starts. It is still a 0% efficiency as none is sure of his guess but at least the sorcerer cannot prevent them from succeeding by luck with an appropriate set-up. They can hopefully expect to save half of them. So this option is slightly better than the former one.
 
 The efficiency is 0% and the efficiency with luck is 50%.
 
 ## The *max* strategy
-Efficiency: ![50%](https://progress-bar.dev/50)
+![Rate](https://progress-bar.dev/50/?title=Rate&width=150&color=babaca)
 
 As dwarf #1 will see 9 hats in front of him, he will necessarily see one predominant color. He will sacrify himself to provide others this information. Following dwarves will then claim this color as their own. A wicked sorcered would then put half white, half black hats to be sure that at most only 50% are saved (and certainly saved).
 
 The efficiency is 50% and the efficiency with luck is 50%.
 
 ## The *neighbour* strategy
-Efficiency: ![50%](https://progress-bar.dev/50)
+![Rate](https://progress-bar.dev/50/?title=Rate&width=150&color=babaca)
 
 Dwarves agree that every odd dwarfs will tell the next dwarf's hat color to rescue him by sacrifying himself.
 
@@ -62,7 +62,7 @@ Hence, dwarves #2, #4, #6, #8 and #10 are certainly saved. By alternating the co
 The efficiency is 50% and the efficiency with luck is 50%.
 
 ## The *two-in-a-row* strategy
-Efficiency: ![60%](https://progress-bar.dev/60)
+![Rate](https://progress-bar.dev/60/?title=Rate&width=150&color=babaca)
 
 The dwarves agree on the following strategy: The first dwarf looks at the next two hats. If they have the same color he claims "Black" otherwise he claimes "White". He sacrifies himself to give information to others.
 
@@ -80,7 +80,7 @@ Dwarf #10 can try a random guess and hopefully pass the guess.
 The efficiency is 60% and the efficiency with luck is 65%.
 
 ## The *binary* strategy
-Efficiency: ![70%](https://progress-bar.dev/70)
+![Rate](https://progress-bar.dev/70/?title=Rate&width=150&color=babaca)
 
 The dwarves agree that they will save the first 3 dwarves in order to encode the number of white hat in the next 7 heads. Using black as 0 and white as 1, they can encode up to 7 which is sufficient.
 
@@ -89,6 +89,6 @@ The first three dwarves are sacrified but now #4 dwarf knows how many white hats
 The efficiency is 70% and the efficiency with luck is 70%.
 
 ## The *best* strategy
-Efficiency: ![90%](https://progress-bar.dev/90)
+![Rate](https://progress-bar.dev/90/?title=Rate&width=150&color=babaca)
 
 If you can think of any innovative strategy not listed here please comment, I will add your proposal to the list!
