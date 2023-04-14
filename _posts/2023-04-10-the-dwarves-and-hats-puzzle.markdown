@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "The Dwarves and Hats Riddle"
+title: "The Dwarves and Hats Puzzle"
 date: 2023-04-10
-categories: riddles
+categories: puzzles
 header:
   teaser: /assets/images/posts/teasers/dwarves.png
 ---
