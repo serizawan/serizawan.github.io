@@ -18,3 +18,5 @@ Well, let's first read ChatGPT's definition of this idiom:
 Actually it is my perception of human beings between unicity and universality. In this blog, I am sharing my personal thoughts with the hope they would have echo for other readers.
 
 The ✌️ is an emoji I like, it has a couple of meanings but all with positively overtone. It is also a summary of unicity (one hand) and multiplicity (two raised fingers) which sticked well to the blog's title!
+
+Another possible naming would have been _One Percent_ or _Iceberg_ to illustrate how we can only scratch the surface of people complexity.
