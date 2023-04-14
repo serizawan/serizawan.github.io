@@ -36,21 +36,21 @@ Let's walk through the strategies starting from the less efficient to the best o
 
 Here the dwarves pick a color during the strategy phase. Once the guessing phase starts, they claim the agreed color one after the other. As the sorcerer can listen to them, he will simply take care setting the color's hat to the remaining one causing the metamorphosis of all of them without letting even them a single chance to pass.
 
-The efficiency is 0% and the efficiency with luck is 0%.
+The success rate is 0% and the efficiency with luck is 0%.
 
 ## The *random* strategy
 ![Rate](https://progress-bar.dev/0/?title=Rate&width=150&color=babaca)
 
 Now the dwarves just take their decision randomly once the guess phase starts. It is still a 0% efficiency as none is sure of his guess but at least the sorcerer cannot prevent them from succeeding by luck with an appropriate set-up. They can hopefully expect to save half of them. So this option is slightly better than the former one.
 
-The efficiency is 0% and the efficiency with luck is 50%.
+The success rate is 0% and the efficiency with luck is 50%.
 
 ## The *max* strategy
 ![Rate](https://progress-bar.dev/50/?title=Rate&width=150&color=babaca)
 
 As dwarf #1 will see 9 hats in front of him, he will necessarily see one predominant color. He will sacrify himself to provide others this information. Following dwarves will then claim this color as their own. A wicked sorcered would then put half white, half black hats to be sure that at most only 50% are saved (and certainly saved).
 
-The efficiency is 50% and the efficiency with luck is 50%.
+The success rate is 50% and the efficiency with luck is 50%.
 
 ## The *neighbour* strategy
 ![Rate](https://progress-bar.dev/50/?title=Rate&width=150&color=babaca)
@@ -59,7 +59,7 @@ Dwarves agree that every odd dwarfs will tell the next dwarf's hat color to resc
 
 Hence, dwarves #2, #4, #6, #8 and #10 are certainly saved. By alternating the color's hat, the sorcered can certainly have odd numbered dwarves failed.
 
-The efficiency is 50% and the efficiency with luck is 50%.
+The success rate is 50% and the efficiency with luck is 50%.
 
 ## The *two-in-a-row* strategy
 ![Rate](https://progress-bar.dev/60/?title=Rate&width=150&color=babaca)
@@ -77,7 +77,7 @@ So 6 dwarves are certainly saved. Sorcerer can configure the hats to have #1, #4
 
 Dwarf #10 can try a random guess and hopefully pass the guess.
 
-The efficiency is 60% and the efficiency with luck is 65%.
+The success rate is 60% and the efficiency with luck is 65%.
 
 ## The *binary* strategy
 ![Rate](https://progress-bar.dev/70/?title=Rate&width=150&color=babaca)
@@ -86,7 +86,7 @@ The dwarves agree that they will save the first 3 dwarves in order to encode the
 
 The first three dwarves are sacrified but now #4 dwarf knows how many white hats there are in total. He can infer his own color. Dwarf #5 update the count based on the previous dwarf guess and also infer his own. Step by step all dwarfs can rightly guess their color.
 
-The efficiency is 70% and the efficiency with luck is 70%.
+The success rate is 70% and the efficiency with luck is 70%.
 
 ## The *best* strategy
 ![Rate](https://progress-bar.dev/90/?title=Rate&width=150&color=babaca)
