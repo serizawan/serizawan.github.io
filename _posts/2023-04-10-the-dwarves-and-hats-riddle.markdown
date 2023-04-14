@@ -25,9 +25,9 @@ What strategy can the dwarves use to maximize the number of dwarves who guess co
 
 {% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle.png" alt="A snapshot of dwarves playing for their destiny" caption="A snapshot of dwarves playing for their destiny." %}
 
-I was asked this riddle when I was a teenager. I was amazed by the effectiveness of the best strategy the dwarves could craft and how this collaborative problem solving was interesting in term of thought process. Since then, I have kept asking this problem to my fellows who were fond of riddles and I was surprised how many different strategies they could craft some more or less powerful.
+I was asked this riddle when I was a teenager. I was amazed by the effectiveness of the best strategy the dwarves could craft and how this collaborative problem solving was interesting in term of thought process. Since then, I have kept asking this brain teaser to my fellows who were fond of riddles and I was surprised how many different strategies they could craft some more or less powerful.
 
-Despite it is not enforced in the statement, we can add the condition that sorcerer can listen to the dwarves strategy to have them failed as much as possible in order to prevent situational guess.
+Despite it is not enforced in the statement, we can add the condition that sorcerer can listen to the dwarves strategy to have them failed as much as possible in order to prevent situational guess. So that we will evaluate dwarves strategies when they encounter the "worst-case" pattern.
 
 Let's walk through the strategies starting from the less efficient to the best one! Note that we estimate the efficiency of a strategy regarding the number of certainly saved dwarves. Lucky guess (meaning the dwarf is not 100% sure to be saved) are counted as failures. We will still mention a lucky score in order to decide rank in case of equality on the previous metric.
 
@@ -92,3 +92,8 @@ The efficiency is 70% and the efficiency with luck is 70%.
 ![Rate](https://progress-bar.dev/90/?title=Rate&width=150&color=babaca)
 
 If you can think of any innovative strategy not listed here please comment, I will add your proposal to the list!
+
+## Others strategies:
+### Braining the sorcerer
+
+## Elaborate on strategies
