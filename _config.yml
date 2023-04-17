@@ -3,6 +3,7 @@ minimal_mistakes_skin: "dark"
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+include: ["_pages"]
 title: "Same But Different"
 subtitle: "A blog by Marwan Ajala"
 name: "Marwan Ajala"
@@ -48,4 +49,10 @@ defaults:
       comments: false
       share: true
       related: true
+      author_profile: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
       author_profile: true

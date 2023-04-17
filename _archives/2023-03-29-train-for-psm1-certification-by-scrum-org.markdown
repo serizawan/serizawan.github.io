@@ -2,7 +2,8 @@
 layout: single
 title: "Train for the PSM1 certification by Scrum.org"
 date: 2023-03-29
-categories: agile
+categories: Agile
+permalink: /:categories/:title/
 header:
   teaser: /assets/images/posts/teasers/certification.png
 ---

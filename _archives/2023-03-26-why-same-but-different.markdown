@@ -2,7 +2,8 @@
 layout: single
 title: "Why I've named my blog: _Same but Different_"
 date: 2023-03-26
-categories: random
+categories: Random
+permalink: /:categories/:title/
 header:
   teaser: /assets/images/posts/teasers/why.png
 ---
