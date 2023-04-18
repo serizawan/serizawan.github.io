@@ -21,7 +21,7 @@ paginate: 5
 author:
   name: "Marwan Ajala"
   avatar: "/assets/images/home/me.jpg"
-  bio: "Currently working at SAP SuccessFactors."
+  bio: "Hey, I am currently working at SAP SuccessFactors as a senior Software Engineer."
   location : "Paris, France"
   links:
     - label: "My Github"

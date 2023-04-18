@@ -8,6 +8,8 @@ header:
   teaser: /assets/images/posts/teasers/dwarves.png
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
 Difficulty: ⭐⭐⭐
 
 A wicked sorcerer has captured ten dwarves and decides to challenge them with a logical puzzle.
@@ -18,11 +20,11 @@ The sorcerer puts either a black hat or a white hat on each dwarf's head at his 
 
 Each dwarf can see the color of the hats of the dwarves in front of him, but cannot see neither the color of his own hat nor the hats' color of the dwarves behind him.
 
-The sorcerer informs the dwarves that he will ask each of them, starting with the tallest, to guess the color of their own hat. If a dwarf guesses correctly, he will be set free. If a dwarf guesses incorrectly, he will be turned into a toad. Dwarves hear the guess (and the rightness) of their previous fellows. The dwarves are allowed to confer before the sorcerer puts hats on their head. But once the guessing begins, they may not communicate with one another in any way than by claiming their hat's color once with a neutral voice.
+The sorcerer informs the dwarves that he will ask each of them, starting with the tallest, to guess the color of their own hat. If a dwarf guesses correctly, he will be set free. If a dwarf guesses incorrectly, he will be turned into a toad. Dwarves hear the guess (and the rightness) of their previous fellows. The dwarves are allowed to confer before the sorcerer puts hats on their head. But once the guessing begins, they may not communicate with one another in any way than by claiming their hat's color once with a neutral voice (they can't touch each other, wait for seconds, whistle...).
 
 What strategy can the dwarves use to maximize the number of correct guesses, and how many dwarves can they guarantee will be set free? 
 
-{% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle.png" alt="A snapshot of dwarves playing for their destiny" caption="A snapshot of dwarves playing for their destiny." %}
+{% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_my_version.png" alt="A snapshot of dwarves playing for their destiny" caption="A snapshot of dwarves playing for their destiny." %}
 
 *Spoiler alert*: The sections below walkthrough solutions of this riddle. Close the page if you want to take time thinking about your own way.
 
