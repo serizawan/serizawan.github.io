@@ -12,19 +12,19 @@ header:
 
 Difficulty: ⭐⭐⭐
 
-A wicked sorcerer has captured ten dwarves and decides to challenge them with a logical puzzle.
+A wicked sorcerer has captured ten dwarves and challenges them with a logical puzzle.
 
 The ten dwarves are forced to queue in a straight line, with the tallest dwarf at the back and the shortest dwarf at the front.
 
-The sorcerer puts either a black hat or a white hat on each dwarf's head at his own discretion. Any combinations of black and white hats are allowed without any constraint on the number of hats by colour.
+The sorcerer places either a black hat or a white hat on each dwarf's head at his own discretion. There are no restrictions on the number of hats of each color, so any combination of black and white hats is allowed. There are 2^10 (or 1024) possible setups. 
 
-Each dwarf can see the color of the hats of the dwarves in front of him, but cannot see neither the color of his own hat nor the hats' color of the dwarves behind him.
+Each dwarf can see the color of the hats worn by the dwarves in front of him, but cannot see neither the color of his own hat nor the hat color of the dwarves behind him.
 
-The sorcerer informs the dwarves that he will ask each of them, starting with the tallest, to guess the color of their own hat. If a dwarf guesses correctly, he will be set free. If a dwarf guesses incorrectly, he will be turned into a toad. Dwarves hear the guess (and the rightness) of their previous fellows. The dwarves are allowed to confer before the sorcerer puts hats on their head. But once the guessing begins, they may not communicate with one another in any way than by claiming their hat's color once with a neutral voice (they can't touch each other, wait for seconds, whistle...).
+The sorcerer informs the dwarves that he will ask each of them, starting with the tallest, to guess the color of their own hat. If a dwarf guesses correctly, he will be set free. If a dwarf guesses incorrectly, he will be turned into a toad. Dwarves hear the claim of their preceding companions. The dwarves are allowed to confer before the sorcerer places hats on their head. However once the guessing begins, they may not communicate with one another in any way other than by stating within a few seconds their hat's color once using a neutral voice (they cannot touch each other, whistle...).
 
 What strategy can the dwarves use to maximize the number of correct guesses, and how many dwarves can they guarantee will be set free? 
 
-{% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_my_version.png" alt="A snapshot of dwarves playing for their destiny" caption="A snapshot of dwarves playing for their destiny." %}
+{% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_my_version.png" alt="A snapshot of dwarves playing their destiny" caption="A snapshot of dwarves playing their destiny." %}
 
 *Spoiler alert*: The sections below walkthrough solutions of this riddle. Close the page if you want to take time thinking about your own way.
 
@@ -34,38 +34,35 @@ Despite it is not enforced in the statement, we can add the condition that the s
 
 Let's walk through the strategies starting from the less efficient to the best one! Note that we estimate the efficiency of a strategy regarding the number of certainly saved dwarves. Lucky guess (where dwarves are not 100% sure to be saved) are counted as failures. We will still mention a lucky score in order to decide ranking in case of equality on the previous metric.
 
-## The *one color* strategy
-![Rate](https://progress-bar.dev/0/?title=Rate&width=150&color=babaca)
+## The *one color* strategy ![Rate](https://progress-bar.dev/0/?title=Rate&width=150&color=babaca)
 
 Here the dwarves pick a color during the strategy phase. Once the guessing phase starts, they claim the agreed color one after the other. As the sorcerer can listen to them, he will simply take care setting the color's hat to the remaining one causing the metamorphosis of all of them without letting even them a single chance to pass.
 
 The success rate is 0% and the success rate with luck is 0%.
 
-## The *random* strategy
-![Rate](https://progress-bar.dev/0/?title=Rate&width=150&color=babaca)
+## The *random* strategy ![Rate](https://progress-bar.dev/0/?title=Rate&width=150&color=babaca)
 
 Now the dwarves just take their decision randomly once the guess phase starts. It is still a 0% success rate as none is sure of their guess but at least the sorcerer cannot prevent them from succeeding by luck with an appropriate preset-up. They can hopefully expect to save half of them. So this option is slightly better than the former one.
 
 The success rate is 0% and the success rate with luck is 50%.
 
-## The *max* strategy
-![Rate](https://progress-bar.dev/50/?title=Rate&width=150&color=babaca)
+## The *max* strategy ![Rate](https://progress-bar.dev/50/?title=Rate&width=150&color=babaca)
 
-As dwarf #1 can see 9 hats in front of him, he will necessarily see one predominant color. He will sacrify himself to provide others this information by claiming this color as his own. Following dwarves will then walk into his footsteps. A wicked sorcered would then put half white, half black hats to be sure that at most only 50% are saved (and certainly saved).
+As dwarf #1 can see 9 hats in front of him, he will necessarily see one predominant color. He will sacrify himself to provide others this information by claiming this color as his own. Following dwarves will then walk into his footsteps. A wicked sorcerer would then put half white, half black hats to be sure that at most only 50% are saved (and certainly saved).
 
 The success rate is 50% and the success rate with luck is 50%.
 
-## The *neighbour* strategy
-![Rate](https://progress-bar.dev/50/?title=Rate&width=150&color=babaca)
+{% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_max_strategy.png" alt="An example of dwarves status after using the max strategy." caption="An example of dwarves status after using the max strategy." %}
+
+## The *neighbour* strategy ![Rate](https://progress-bar.dev/50/?title=Rate&width=150&color=babaca)
 
 Dwarves agree that every odd dwarfs will tell the next dwarf's hat color to rescue him by sacrifying himself.
 
-Hence, dwarves #2, #4, #6, #8 and #10 are certainly saved. By alternating the color's hat, the sorcered can certainly have odd numbered dwarves failed.
+Hence, dwarves #2, #4, #6, #8 and #10 are certainly saved. By alternating the color's hat, the sorcerer can certainly have odd numbered dwarves failed.
 
 The success rate is 50% and the success rate with luck is 50%.
 
-## The *two-in-a-row* strategy
-![Rate](https://progress-bar.dev/60/?title=Rate&width=150&color=babaca)
+## The *two-in-a-row* strategy ![Rate](https://progress-bar.dev/60/?title=Rate&width=150&color=babaca)
 
 The dwarves agree on the following strategy: The first dwarf looks at the next two hats. If they have the same color he claims "Black" otherwise he claims "White". He sacrifies himself to give information to his two next fellows.
 
@@ -82,8 +79,10 @@ Dwarf #10 can try a random guess and hopefully pass the test.
 
 The success rate is 60% and the success rate with luck is 65%.
 
-## The *binary* strategy
-![Rate](https://progress-bar.dev/70/?title=Rate&width=150&color=babaca)
+## The *advanced two-in-a-row* strategy
+WIP
+
+## The *binary* strategy ![Rate](https://progress-bar.dev/70/?title=Rate&width=150&color=babaca)
 
 The dwarves agree that they will sacrify the first 3 dwarves in order to encode the number of white hat on the next 7 heads. Using black as 0 and white as 1 alphabet, they can encode up to 2^3 - 1 = 7 which is sufficient.
 
@@ -91,8 +90,12 @@ The first three dwarves are sacrified but now #4 dwarf knows how many white hats
 
 The success rate is 70% and the success rate with luck is 70%.
 
-## The *best* strategy
-![Rate](https://progress-bar.dev/90/?title=Rate&width=150&color=babaca)
+A variation of this strategy (minimal number)
+
+## The *combined* strategy
+WIP
+
+## The *best* strategy ![Rate](https://progress-bar.dev/90/?title=Rate&width=150&color=babaca)
 
 Here the dwarves ask the first one to sacrify and communicate the white hat's parity to the group using the below encoding:
   - "white" for "# of white hats is even"

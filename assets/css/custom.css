@@ -1,3 +1,13 @@
 p {
   text-align: justify;
+  text-indent: 1em;
+}
+
+img[alt~="Rate"] {
+  float: right;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
 }
