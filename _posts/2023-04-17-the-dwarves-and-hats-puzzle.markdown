@@ -34,19 +34,19 @@ Despite it is not enforced in the statement, we can add the condition that the s
 
 Let's walk through the strategies starting from the less efficient to the best one! Note that we estimate the efficiency of a strategy regarding the number of certainly saved dwarves. Lucky guess (where dwarves are not 100% sure to be saved) are counted as failures. We will still mention a lucky score in order to decide ranking in case of equality on the previous metric.
 
-## The *one color* strategy ![Rate](https://progress-bar.dev/0/?title=Rate&width=150&color=babaca)
+## The *one color* strategy ![Rate](https://progress-bar.dev/0/?title=Rate&width=100&color=babaca)
 
 Here the dwarves pick a color during the strategy phase. Once the guessing phase starts, they claim the agreed color one after the other. As the sorcerer can listen to them, he will simply take care setting the color's hat to the remaining one causing the metamorphosis of all of them without letting even them a single chance to pass.
 
 The success rate is 0% and the success rate with luck is 0%.
 
-## The *random* strategy ![Rate](https://progress-bar.dev/0/?title=Rate&width=150&color=babaca)
+## The *random* strategy ![Rate](https://progress-bar.dev/0/?title=Rate&width=100&color=babaca)
 
 Now the dwarves just take their decision randomly once the guess phase starts. It is still a 0% success rate as none is sure of their guess but at least the sorcerer cannot prevent them from succeeding by luck with an appropriate preset-up. They can hopefully expect to save half of them. So this option is slightly better than the former one.
 
 The success rate is 0% and the success rate with luck is 50%.
 
-## The *max* strategy ![Rate](https://progress-bar.dev/50/?title=Rate&width=150&color=babaca)
+## The *max* strategy ![Rate](https://progress-bar.dev/50/?title=Rate&width=100&color=babaca)
 
 As dwarf #1 can see 9 hats in front of him, he will necessarily see one predominant color. He will sacrify himself to provide others this information by claiming this color as his own. Following dwarves will then walk into his footsteps. A wicked sorcerer would then put half white, half black hats to be sure that at most only 50% are saved (and certainly saved).
 
@@ -54,7 +54,7 @@ The success rate is 50% and the success rate with luck is 50%.
 
 {% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_max_strategy.png" alt="An example of dwarves status after using the max strategy." caption="An example of dwarves status after using the max strategy." %}
 
-## The *neighbour* strategy ![Rate](https://progress-bar.dev/50/?title=Rate&width=150&color=babaca)
+## The *neighbour* strategy ![Rate](https://progress-bar.dev/50/?title=Rate&width=100&color=babaca)
 
 Dwarves agree that every odd dwarfs will tell the next dwarf's hat color to rescue him by sacrifying himself.
 
@@ -62,7 +62,7 @@ Hence, dwarves #2, #4, #6, #8 and #10 are certainly saved. By alternating the co
 
 The success rate is 50% and the success rate with luck is 50%.
 
-## The *two-in-a-row* strategy ![Rate](https://progress-bar.dev/60/?title=Rate&width=150&color=babaca)
+## The *two-in-a-row* strategy ![Rate](https://progress-bar.dev/60/?title=Rate&width=100&color=babaca)
 
 The dwarves agree on the following strategy: The first dwarf looks at the next two hats. If they have the same color he claims "Black" otherwise he claims "White". He sacrifies himself to give information to his two next fellows.
 
@@ -82,7 +82,7 @@ The success rate is 60% and the success rate with luck is 65%.
 ## The *advanced two-in-a-row* strategy
 WIP
 
-## The *binary* strategy ![Rate](https://progress-bar.dev/70/?title=Rate&width=150&color=babaca)
+## The *binary* strategy ![Rate](https://progress-bar.dev/70/?title=Rate&width=100&color=babaca)
 
 The dwarves agree that they will sacrify the first 3 dwarves in order to encode the number of white hat on the next 7 heads. Using black as 0 and white as 1 alphabet, they can encode up to 2^3 - 1 = 7 which is sufficient.
 
@@ -95,7 +95,7 @@ A variation of this strategy (minimal number)
 ## The *combined* strategy
 WIP
 
-## The *best* strategy ![Rate](https://progress-bar.dev/90/?title=Rate&width=150&color=babaca)
+## The *best* strategy ![Rate](https://progress-bar.dev/90/?title=Rate&width=100&color=babaca)
 
 Here the dwarves ask the first one to sacrify and communicate the white hat's parity to the group using the below encoding:
   - "white" for "# of white hats is even"
