@@ -52,7 +52,7 @@ As dwarf #1 can see 9 hats in front of him, he will necessarily see one predomin
 
 The success rate is 50% and the success rate with luck is 50%.
 
-{% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_max_strategy.png" alt="An example of dwarves status after using the max strategy." caption="An example of dwarves status after using the max strategy." %}
+{% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_max_strategy.png" alt="An example of dwarves status after they applied the max strategy." caption="An example of dwarves status after they applied the max strategy." %}
 
 ## The *neighbour* strategy ![Rate](https://progress-bar.dev/50/?title=Rate&width=100&color=babaca)
 
@@ -79,8 +79,14 @@ Dwarf #10 can try a random guess and hopefully pass the test.
 
 The success rate is 60% and the success rate with luck is 65%.
 
-## The *advanced two-in-a-row* strategy
-WIP
+## The *advanced two-in-a-row* strategy ![Rate](https://progress-bar.dev/70/?title=Rate&width=100&color=babaca)
+The dwarves leverage the previous "two-in-a-row" technique except they base their encoding language after the hat's assignment on the 10th dwarf hat color:
+- If 10th dwarf hat is white, they will pick the following translation mapper: White -> Two next hats have the same color and Black -> Two next hats have different colors.
+- If 10th dwarf hat is black, they will pick the opposite translation mapper: White -> Two next hats have different colors and Black -> Two next hats have the same colors.
+
+#1 to #9 see the #10 hat's color and know the translation dictionnary, they can apply the previous strategy. But now, dwarf #10 has heard dwarves #2 and #3 colors and deduce the mapper picked by dwarf #1 which gives him his own hat color!
+
+The success rate is 70% and the success rate with luck is 70%.
 
 ## The *binary* strategy ![Rate](https://progress-bar.dev/70/?title=Rate&width=100&color=babaca)
 
@@ -92,7 +98,7 @@ The success rate is 70% and the success rate with luck is 70%.
 
 A variation of this strategy (minimal number)
 
-## The *combined* strategy
+## The *combined* strategy ![Rate](https://progress-bar.dev/80/?title=Rate&width=100&color=babaca)
 WIP
 
 ## The *best* strategy ![Rate](https://progress-bar.dev/90/?title=Rate&width=100&color=babaca)
