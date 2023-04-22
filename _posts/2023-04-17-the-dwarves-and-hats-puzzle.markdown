@@ -20,9 +20,9 @@ The sorcerer places either a black hat or a white hat on each dwarf's head at hi
 
 Each dwarf can see the color of the hats worn by the dwarves in front of him, but cannot see neither the color of his own hat nor the hat color of the dwarves behind him.
 
-The sorcerer informs the dwarves that he will ask each of them, starting with the tallest, to guess the color of their own hat. If a dwarf guesses correctly, he will be set free. If a dwarf guesses incorrectly, he will be turned into a toad. Dwarves hear the claim of their preceding companions. The dwarves are allowed to confer before the sorcerer places hats on their head. However once the guessing begins, they may not communicate with one another in any way other than by stating within a few seconds their hat's color once using a neutral voice (they cannot touch each other, whistle...).
+The sorcerer informs the dwarves that he will ask each of them, starting with the tallest, to guess the color of their own hat. If a dwarf guesses correctly, he will be set free. If a dwarf guesses incorrectly, he will be turned into a toad. Dwarves hear the claim of their preceding companions. The dwarves are allowed to confer before the sorcerer places hats on their head. However once the guessing begins, they may not communicate with one another in any way other than by stating within a few seconds their hat's color once using a neutral voice.
 
-What strategy can the dwarves use to maximize the number of correct guesses, and how many dwarves can they guarantee will be set free? 
+What strategy can the dwarves craft and apply to maximize the number of saved dwarves? 
 
 {% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_my_version.png" alt="A snapshot of dwarves playing their destiny" caption="A snapshot of dwarves playing their destiny." %}
 
@@ -96,10 +96,31 @@ The first three dwarves are sacrified but now #4 dwarf knows how many white hats
 
 The success rate is 70% and the success rate with luck is 70%.
 
-A variation of this strategy (minimal number)
+Note that encoding the number of hat color in minority leads to:
+- Encode 0, 1, 2, 3, 4 for 8 dwarves (hence 5 values with 2 remaining first dwarf which is NOT possible)
+- Encode 0, 1, 2, 3 for 7 dwarves (hence 4 values which requires only 2 dwarves, the last can try a random guess which is slightly better than the standard binary strategy)
+- Encode 0, 1, 2, 3 for 6 dwarves (hence 4 values which requires only 2 dwarves, the last two can apply a neighbour strategy, this leads to the same efficiency as the standard binary strategy)
 
 ## The *combined* strategy ![Rate](https://progress-bar.dev/80/?title=Rate&width=100&color=babaca)
-WIP
+Here, dwarves combine two strategies to reach a better efficiency:
+- The binary strategy (using white=1, black=0 language)
+- The two-in-a-row strategy
+
+During the strategy-craft time, dwarves agree that the first two dwarves (#1, #2) adapt their strategy on the next two dwarf (#3, #4) hats similarity once the hat assignement is completed. If dwarves #3 and #4:
+- (A) have similar hat color, they will encode in binary the number of hat's color in minority on the last 6 hats.
+- (B) have different hat color, they will encode in binary the number of hat's color in majority on the last 6 hats minus 3.
+
+
+|                                 | #1 and #2 encoding if #3 and #4 identical | #1 and #2 encoding if #3 and #4 different |
+|---------------------------------|-------------------------------------------|-------------------------------------------|
+| hat color's pool sizes: 0 and 6 | BB (0)                                    | WW (3)                                    |
+| hat color's pool sizes: 1 and 5 | BW (1)                                    | WB (2)                                    |
+| hat color's pool sizes: 2 and 4 | WB (2)                                    | BW (1)                                    |
+| hat color's pool sizes: 3 and 3 | WW (3)                                    | BB (0)                                    |
+
+Dwarves #3 and #4 observes the next 6 dwarves and compare the above table to what they see (notice that on the same row, values always differ). They deduce if their hats are identical or not and apply the "two-in-a-row" strategy to save their lives!
+
+Dwarves #5 heared the #3 and #4 hat's color similarity and know which column to refer. He and his following fellows can apply a simple binary strategy one after the other because they know the hats color pool sizes and can infer their own to make it right.
 
 ## The *best* strategy ![Rate](https://progress-bar.dev/90/?title=Rate&width=100&color=babaca)
 
@@ -118,3 +139,19 @@ Successively, dwarfs keep updating the # of white hats parity based on first dwa
 Following this pattern, dwarves #2 to #10 can rightly guess their hat's color.
 
 The success rate is 90%. First dwarf is doomed by the wicked sorcerer preset-up. Success rate with luck is 90%.
+
+
+# What I love about this puzzle
+There are not so many puzzles where you can progressively find that variety of possible solutions with increasing success levels that it doesn't make this puzzle a black-and-white case (pun intended) where you get it only right or wrong.
+
+The problem is posed in such a way that the puzzler doesn't focus on the best strategy but rather adopts a "can-we-do-better" way of thinking which is common to opitmization problems. I like this mindset as it allows very young puzzlers to find solutions as well as experienced one.
+
+
+# FAQ
+## Can dwarves spit, whistle, blow or touch each other to communicate information to other dwarves?
+No! As mentionned in the problem statement: (Dwarves) may not communicate with one another IN ANY OTHER WAY than by stating within a few seconds their hat's color. Meaning also, they can't use their response timing to infer anything to their partners.
+
+## How smart are the dwarves and the sorcerer?
+They are both considered pure logicians which means they always perfectly apply their defined plan without any concern of possible mistakes. Note that dwarf don't know they are listened by the sorcered during the strategy-craft time which forces them to assume they will get a random assigment. Also, they can't try braining strategies like: Let's agree on "Black" as the claimed color and switching to "White" at guess time knowing that the sorcered would try to have them failed! That would be a nice brain (efficiency is 100%) but that would also suppose the sorcerer is not enough smart to anticipate a brain. If we suppose them equally smart, they would end in a dead-end brain loop where either all or none would be saved (which actually is not a bad bet).
+
+## Is the problem physically possible?
