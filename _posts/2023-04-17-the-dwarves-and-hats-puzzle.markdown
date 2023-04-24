@@ -40,11 +40,15 @@ Here the dwarves pick a color during the strategy phase. Once the guessing phase
 
 The success rate is 0% and the success rate with luck is 0%.
 
+{% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_one_color_strategy.png" alt="What happens when the sorcerer listens to the dwarves' one-color strategy." caption="What happens when the sorcerer listens to the dwarves' one-color strategy." %}
+
 ## The *random* strategy ![Rate](https://progress-bar.dev/0/?title=Rate&width=100&color=babaca)
 
 Now the dwarves just take their decision randomly once the guess phase starts. It is still a 0% success rate as none is sure of their guess but at least the sorcerer cannot prevent them from succeeding by luck with an appropriate preset-up. They can hopefully expect to save half of them. So this option is slightly better than the former one.
 
 The success rate is 0% and the success rate with luck is 50%.
+
+{% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_random_strategy.png" alt="Unlucky dwarves could only rescue 3 of them by applying the random strategy." caption="Unlucky dwarves could only rescue 3 of them by applying the random strategy." %}
 
 ## The *max* strategy ![Rate](https://progress-bar.dev/50/?title=Rate&width=100&color=babaca)
 
@@ -89,7 +93,6 @@ The dwarves leverage the previous "two-in-a-row" technique except they base thei
 The success rate is 70% and the success rate with luck is 70%.
 
 ## The *binary* strategy ![Rate](https://progress-bar.dev/70/?title=Rate&width=100&color=babaca)
-
 The dwarves agree that they will sacrify the first 3 dwarves in order to encode the number of white hat on the next 7 heads. Using black as 0 and white as 1 alphabet, they can encode up to 2^3 - 1 = 7 which is sufficient.
 
 The first three dwarves are sacrified but now #4 dwarf knows how many white hats there are in total. He can infer his own color. Dwarf #5 update the count based on the previous dwarf guess and also infer his own. Step by step all dwarfs can rightly guess their color.
@@ -144,14 +147,15 @@ The success rate is 90%. First dwarf is doomed by the wicked sorcerer preset-up.
 # What I love about this puzzle
 There are not so many puzzles where you can progressively find that variety of possible solutions with increasing success levels that it doesn't make this puzzle a black-and-white case (pun intended) where you get it only right or wrong.
 
-The problem is posed in such a way that the puzzler doesn't focus on the best strategy but rather adopts a "can-we-do-better" way of thinking which is common to opitmization problems. I like this mindset as it allows very young puzzlers to find solutions as well as experienced one.
-
+The problem is posed in such a way that the puzzler doesn't focus on the best strategy but rather adopts a "can-we-do-better" way of thinking which is common to opitmization problems. I like this mindset as it allows very young puzzlers to find solutions as well as experienced one. I feel like and I experienced that the problem statement doesn't look solvable at a 90% success rate, most puzzlers have been impressed once they could figure out (or be prompted with) the best solution.
 
 # FAQ
 ## Can dwarves spit, whistle, blow or touch each other to communicate information to other dwarves?
 No! As mentionned in the problem statement: (Dwarves) may not communicate with one another IN ANY OTHER WAY than by stating within a few seconds their hat's color. Meaning also, they can't use their response timing to infer anything to their partners.
 
+# Not-so-FAQ
 ## How smart are the dwarves and the sorcerer?
 They are both considered pure logicians which means they always perfectly apply their defined plan without any concern of possible mistakes. Note that dwarf don't know they are listened by the sorcered during the strategy-craft time which forces them to assume they will get a random assigment. Also, they can't try braining strategies like: Let's agree on "Black" as the claimed color and switching to "White" at guess time knowing that the sorcered would try to have them failed! That would be a nice brain (efficiency is 100%) but that would also suppose the sorcerer is not enough smart to anticipate a brain. If we suppose them equally smart, they would end in a dead-end brain loop where either all or none would be saved (which actually is not a bad bet).
 
 ## Is the problem physically possible?
+If we accept that dwarves and sorcered do exist and that they live in a world where our law of physics apply, let's see if this problem would be physically viable.
