@@ -56,3 +56,8 @@ defaults:
     values:
       layout: single
       author_profile: true
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-7CRDCRDSQS"
+    anonymize_ip: false
