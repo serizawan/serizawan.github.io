@@ -60,7 +60,7 @@ The success rate is 50% and the success rate with luck is 50%.
 
 {% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_i/dwarves_and_hats_puzzle_max_strategy.png" alt="An example of dwarves status after they applied the max strategy." caption="An example of dwarves status after they applied the max strategy." %}
 
-## The *neighbour* strategy ![Rate](https://progress-bar.dev/50/?title=Rate&width=100&color=babaca)
+## The *next-one* strategy ![Rate](https://progress-bar.dev/50/?title=Rate&width=100&color=babaca)
 
 Dwarves agree that every odd dwarfs will tell the next dwarf's hat color to rescue him by sacrifying himself.
 
@@ -70,7 +70,7 @@ The success rate is 50% and the success rate with luck is 50%.
 
 {% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_i/dwarves_and_hats_puzzle_neighbour_strategy.png" alt="An example of dwarves status after they applied the neighbour strategy." caption="An example of dwarves status after they applied the neighbour strategy." %}
 
-## The *two-in-a-row* strategy ![Rate](https://progress-bar.dev/60/?title=Rate&width=100&color=babaca)
+## The *next-two* strategy ![Rate](https://progress-bar.dev/60/?title=Rate&width=100&color=babaca)
 
 The dwarves agree on the following strategy: The first dwarf looks at the next two hats. If they have the same color he claims "Black" otherwise he claims "White". He sacrifies himself to give information to his two next fellows.
 
@@ -87,10 +87,10 @@ Dwarf #10 can try a random guess and hopefully pass the test.
 
 The success rate is 60% and the success rate with luck is 65%.
 
-{% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_i/dwarves_and_hats_puzzle_two_in_row_strategy.png" alt="An example of dwarves status after they applied the two-in-a-row strategy." caption="An example of dwarves status after they applied the two-in-a-row strategy." %}
+{% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_i/dwarves_and_hats_puzzle_two_in_row_strategy.png" alt="An example of dwarves status after they applied the next-two strategy." caption="An example of dwarves status after they applied the next-two strategy." %}
 
-## The *advanced two-in-a-row* strategy ![Rate](https://progress-bar.dev/70/?title=Rate&width=100&color=babaca)
-The dwarves leverage the previous "two-in-a-row" technique except they base their encoding language after the hat's assignment on the 10th dwarf hat color:
+## The *next-two-up* strategy ![Rate](https://progress-bar.dev/70/?title=Rate&width=100&color=babaca)
+The dwarves leverage the previous "next-two" technique except they base their encoding language after the hat's assignment on the 10th dwarf hat color:
 - If 10th dwarf hat is white, they will pick the following translation mapper: White -> Two next hats have the same color and Black -> Two next hats have different colors.
 - If 10th dwarf hat is black, they will pick the opposite translation mapper: White -> Two next hats have different colors and Black -> Two next hats have the same colors.
 
@@ -137,7 +137,7 @@ Dwarves #5 heared the #3 and #4 hat's color similarity and know which column to 
 
 {% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_i/dwarves_and_hats_puzzle_combined_strategy.png" alt="An example of dwarves status after they applied the combined strategy." caption="An example of dwarves status after they applied the combined strategy." %}
 
-## The *best* strategy (parity strategy) ![Rate](https://progress-bar.dev/90/?title=Rate&width=100&color=babaca)
+## The *parity* strategy ![Rate](https://progress-bar.dev/90/?title=Rate&width=100&color=babaca)
 
 Here the dwarves ask the first one to sacrify and communicate the white hat's parity to the group using the below encoding:
   - "white" for "# of white hats is even"
@@ -154,6 +154,8 @@ Successively, dwarfs keep updating the # of white hats parity based on first dwa
 Following this pattern, dwarves #2 to #10 can rightly guess their hat's color.
 
 The success rate is 90%. First dwarf is doomed by the wicked sorcerer preset-up. Success rate with luck is 90%.
+
+Obviously this is the best strategy as there is no chance the first dwarf could certainly guess his hat's color without no information.
 
 {% include figure image_path="/assets/images/posts/main/dwarves_and_hats_puzzle_i/dwarves_and_hats_puzzle_parity_strategy.png" alt="An example of dwarves status after they applied the parity strategy." caption="An example of dwarves status after they applied the parity strategy." %}
 
